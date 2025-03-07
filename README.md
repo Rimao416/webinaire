@@ -1,35 +1,27 @@
-# 01_Initialisation
+# 02_Installation de Tailwindcss
 
-Bienvenue dans ce webinaire ! 🚀 Nous sommes ravis de vous accompagner dans cette aventure. Que vous soyez débutant ou expérimenté, ce guide vous aidera à démarrer efficacement et à tirer le meilleur parti de ce projet. 
+## Étape 1 : Installer les dépendances
 
-Suivez attentivement les étapes ci-dessous pour une configuration sans accroc :
+Ouvrez votre terminal et exécutez la commande suivante pour installer Tailwind CSS et le plugin Vite :
 
-## Étapes d'initialisation
+```bash
+npm install tailwindcss @tailwindcss/vite
+```
 
-1️⃣ **Cloner la branche du projet** :
-   ```bash
-   git clone --single-branch --branch 01_Initialisation https://github.com/Rimao416/webinaire
-   ```
+## Etape 2 : Configurer vite
 
-2️⃣ **Se diriger dans le projet** :
-   ```bash
-   cd webinaire
-   ```
+Ouvrez votre fichier `vite.config.ts` et ajoutez la configuration suivante :
 
-3️⃣ **Installer les dépendances** :
-   ```bash
-   npm install 
-   ```
+## Etape 3 : Importer Tailwind Css
 
-4️⃣ **Lancer le projet** :
-   ```bash
-   npm run dev 
-   ```
+Ouvrez votre fichier `index.css` et ajoutez la ligne suivante pour importer Tailwind CSS :
 
-## Conseils pour une meilleure productivité
-✅ Assurez-vous d’avoir la dernière version de Node.js installée.
-✅ Utilisez un environnement de développement bien configuré (VS Code recommandé).
-✅ Consultez la documentation pour toute question technique.
-✅ Pensez à créer une branche avant d'apporter des modifications.
+```bash
+@import "tailwindcss
+```
 
-Bonne exploration et bon développement ! 🚀
+## Etape 4 : Démarrer le serveur de développement
+
+`npm run dev`
+
+Et voilà! Vous avez maintenant Tailwind Css Configuré dans votre projet vite
