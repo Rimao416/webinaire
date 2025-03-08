@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css'; // On importe le fichier CSS
 import Navbar from '../components/Navbar';
+import MainLayouts from '../Layouts/MainLayouts';
 
 function Contact() {
   // États pour stocker les valeurs du formulaire
@@ -21,7 +22,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact">
+<MainLayouts>
         <Navbar/>
       <h1>Contactez-nous</h1>
       <p>Nous serions ravis de répondre à vos questions.</p>
@@ -79,7 +80,7 @@ function Contact() {
           Envoyer
         </button>
       </form>
-    </div>
+      </MainLayouts>
   );
 }
 

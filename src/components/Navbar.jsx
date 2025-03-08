@@ -6,9 +6,15 @@ function Navbar() {
         href:"/",
         text:"Accueil"
       },{
+        href:"/blog",
+        text:"Blog"
+      }
+      ,{
         href:"/contact",
         text:"Contact"
-      }]
+      }
+    
+    ]
   return (
     <nav className="navbar">
     <div className="navbar-brand">

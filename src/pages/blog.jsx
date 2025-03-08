@@ -1,6 +1,7 @@
 import React from 'react';
 import "../styles/Blog.css"
 import Navbar from '../components/Navbar';
+import MainLayouts from '../Layouts/MainLayouts';
 
 function Blog() {
   function subString(str) {
@@ -50,7 +51,9 @@ function Blog() {
 
 
   return (
-    <div className="blog">
+<MainLayouts>
+
+
       {/* Barre de navigation intégrée directement */}
       <Navbar/>
 
@@ -69,7 +72,7 @@ function Blog() {
           </article>
         ))}
       </div>
-    </div>
+      </MainLayouts>
   );
 }
 
