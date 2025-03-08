@@ -4,15 +4,12 @@ import Navbar from '../components/Navbar';
 import MainLayouts from '../Layouts/MainLayouts';
 import SkeletonLoader from '../components/Skeleton';
 import { useArticles } from '../hooks/useArticles';
+import subString from '../utils';
+import Article from '../components/Article';
 
 function Admin() {
     const {articles,loading}=useArticles();
-  function subString(str) {
-    if (str.length > 100) {
-      return str.substring(0, 100) + '...';
-    }
-    return str;
-  }
+  
 
 
 
@@ -32,13 +29,7 @@ function Admin() {
       ) : (
         <div className="articles">
           {articles.map((article) => (
-            <article key={article.id} className="article">
-              <h2>{article.title}</h2>
-              <p>{subString(article.description)}</p>
-              <a href={`/article/${article.slug}`} className="read-more">
-                Lire l'article →
-              </a>
-            </article>
+           <Article key={article.id} id={article.id} title={article.title} description={subString(article.description)} slug={article.slug} />  
           ))}
         </div>
       )}

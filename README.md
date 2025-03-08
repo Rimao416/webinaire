@@ -1,2 +1,3 @@
-# 14_Fetch_Refactor
-Nous avons refactorisé notre code axios et nous l'avons rendu meilleur
+# 15_utils
+Nous avons utilisé les utils
+et refactorisé notre composant
