@@ -1,7 +1,9 @@
 import React from 'react';
 import './styles/Blog.css'; // On importe le fichier CSS
 function App() {
-  
+  function subString(chaine){
+    return chaine.substring(0, 20);
+  }
 
   return (
     <div className="blog">
@@ -14,6 +16,7 @@ function App() {
         <article className="article">
           <h2>Introduction à React</h2>
           <p>
+
             React est une bibliothèque JavaScript populaire pour construire des interfaces utilisateur. Dans cet article, nous explorons les bases de React, y compris les composants, les props et l'état.
           </p>
           <a href="/article/introduction-a-react" className="read-more">
