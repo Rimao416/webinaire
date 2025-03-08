@@ -1,2 +1,2 @@
-# 09 Pages
-Dans cette branche, nous avons initialisé les différentes pages qui nous serviront dans notre projet
+# 10_Navbar_Probleme
+Dans cette branche, nous avons fais un code sans composant réutilisable pour qu'ils voient l'importance des composants réutilisables

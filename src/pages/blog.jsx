@@ -1,5 +1,6 @@
 import React from 'react';
 import "../styles/Blog.css"
+import { Link } from 'react-router-dom';
 
 function Blog() {
   function subString(str) {
@@ -59,16 +60,16 @@ function Blog() {
       {/* Barre de navigation intégrée directement */}
       <nav className="navbar">
         <div className="navbar-brand">
-          <a href="/" className="navbar-logo">
+          <Link href="/" className="navbar-logo">
             Mon Blog
-          </a>
+          </Link>
         </div>
         <ul className="navbar-links">
           {navBar.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="navbar-link">
+              <Link href={link.href} className="navbar-link">
                 {link.text}
-              </a>
+              </Link>
             </li>
           ))}
           

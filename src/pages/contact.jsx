@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css'; // On importe le fichier CSS
+import { Link } from 'react-router-dom';
 
 function Contact() {
   // États pour stocker les valeurs du formulaire
@@ -18,9 +19,32 @@ function Contact() {
     setSubject('');
     setMessage('');
   };
-
+  const navBar=[{
+    href:"/",
+    text:"Accueil"
+  },{
+    href:"/contact",
+    text:"Contact"
+  }]
   return (
     <div className="contact">
+        <nav className="navbar">
+        <div className="navbar-brand">
+          <Link href="/" className="navbar-logo">
+            Mon Blog
+          </Link>
+        </div>
+        <ul className="navbar-links">
+          {navBar.map((link) => (
+            <li key={link.href}>
+              <Link href={link.href} className="navbar-link">
+                {link.text}
+              </Link>
+            </li>
+          ))}
+          
+        </ul>
+      </nav>
       <h1>Contactez-nous</h1>
       <p>Nous serions ravis de répondre à vos questions.</p>
 
