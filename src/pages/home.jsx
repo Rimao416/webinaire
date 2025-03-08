@@ -1,10 +1,12 @@
 import React from 'react';
 import '../styles/Home.css'; // On importe le fichier CSS
+import Navbar from '../components/Navbar';
 
 function Home() {
   return (
     <div className="home">
       {/* Section Hero */}
+      <Navbar/>
       <section className="hero">
         <h1>Bienvenue sur Mon Site Professionnel</h1>
         <p>Découvrez des solutions modernes et innovantes pour vos besoins en développement web.</p>

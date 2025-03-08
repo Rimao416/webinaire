@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/Blog.css"
-import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 function Blog() {
   function subString(str) {
@@ -47,34 +47,12 @@ function Blog() {
       slug: 'debuter-git-github',
     },
   ];
-  const navBar=[{
-    href:"/",
-    text:"Accueil"
-  },{
-    href:"/contact",
-    text:"Contact"
-  }]
+
 
   return (
     <div className="blog">
       {/* Barre de navigation intégrée directement */}
-      <nav className="navbar">
-        <div className="navbar-brand">
-          <Link href="/" className="navbar-logo">
-            Mon Blog
-          </Link>
-        </div>
-        <ul className="navbar-links">
-          {navBar.map((link) => (
-            <li key={link.href}>
-              <Link href={link.href} className="navbar-link">
-                {link.text}
-              </Link>
-            </li>
-          ))}
-          
-        </ul>
-      </nav>
+      <Navbar/>
 
       <header className="header">
         <h1>Mon Blog Professionnel</h1>
