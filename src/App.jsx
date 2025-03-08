@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/Blog.css'; // On importe le fichier CSS
+
 function App() {
   function subString(str) {
     if (str.length > 100) {
@@ -7,6 +8,7 @@ function App() {
     }
     return str;
   }
+
   const articles = [
     {
       id: 1,
@@ -47,6 +49,32 @@ function App() {
 
   return (
     <div className="blog">
+      {/* Barre de navigation intégrée directement */}
+      <nav className="navbar">
+        <div className="navbar-brand">
+          <a href="/" className="navbar-logo">
+            Mon Blog
+          </a>
+        </div>
+        <ul className="navbar-links">
+          <li>
+            <a href="/" className="navbar-link">
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="/about" className="navbar-link">
+              À propos
+            </a>
+          </li>
+          <li>
+            <a href="/contact" className="navbar-link">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+
       <header className="header">
         <h1>Mon Blog Professionnel</h1>
         <p>Des articles sur le développement web et les bonnes pratiques.</p>
