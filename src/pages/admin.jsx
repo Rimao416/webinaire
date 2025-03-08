@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import "../styles/Blog.css"
+import "../styles/Admin.css"
 import Navbar from '../components/Navbar';
 import MainLayouts from '../Layouts/MainLayouts';
 import axios from 'axios';
 import SkeletonLoader from '../components/Skeleton';
 
-function Blog() {
+function Admin() {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true); // État pour le chargement
   function subString(str) {
@@ -64,4 +64,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default Admin;
