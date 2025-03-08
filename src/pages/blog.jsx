@@ -1,36 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import "../styles/Blog.css"
 import Navbar from '../components/Navbar';
 import MainLayouts from '../Layouts/MainLayouts';
-import axios from 'axios';
 import SkeletonLoader from '../components/Skeleton';
+import { useArticles } from '../hooks/useArticles';
 
 function Blog() {
-    const [articles, setArticles] = useState([]);
-    const [loading, setLoading] = useState(true); // État pour le chargement
+    const { articles, loading } = useArticles();
   function subString(str) {
     if (str.length > 100) {
       return str.substring(0, 100) + '...';
     }
     return str;
   }
-  function getArticles() {
-    axios
-      .get('http://localhost:5000/articles')
-      .then((res) => {
-        setArticles(res.data);
-        setLoading(false); // Arrêter le chargement une fois les données reçues
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false); // Arrêter le chargement en cas d'erreur
-      });
-  }
-
-  // Charger les articles au montage du composant
-  useEffect(() => {
-    getArticles();
-  }, []);
 
 
 
