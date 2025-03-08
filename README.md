@@ -1,3 +1,2 @@
-# 15_utils
-Nous avons utilisé les utils
-et refactorisé notre composant
+# 16_Initialisation
+Permet d'initialiser un projet react
