@@ -50,9 +50,6 @@ function Blog() {
     href:"/",
     text:"Accueil"
   },{
-    href:"/about",
-    text:"A propos"
-  },{
     href:"/contact",
     text:"Contact"
   }]
