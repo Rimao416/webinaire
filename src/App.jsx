@@ -46,6 +46,16 @@ function App() {
       slug: 'debuter-git-github',
     },
   ];
+  const navBar=[{
+    href:"/",
+    text:"Accueil"
+  },{
+    href:"/about",
+    text:"A propos"
+  },{
+    href:"/contact",
+    text:"Contact"
+  }]
 
   return (
     <div className="blog">
@@ -57,21 +67,14 @@ function App() {
           </a>
         </div>
         <ul className="navbar-links">
-          <li>
-            <a href="/" className="navbar-link">
-              Accueil
-            </a>
-          </li>
-          <li>
-            <a href="/about" className="navbar-link">
-              À propos
-            </a>
-          </li>
-          <li>
-            <a href="/contact" className="navbar-link">
-              Contact
-            </a>
-          </li>
+          {navBar.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} className="navbar-link">
+                {link.text}
+              </a>
+            </li>
+          ))}
+          
         </ul>
       </nav>
 
